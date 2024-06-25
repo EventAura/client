@@ -161,7 +161,7 @@ export const team = [
   },
   {
     avatar:
-      "https://media.licdn.com/dms/image/D5603AQHsniGzfjuVag/profile-displayphoto-shrink_100_100/0/1718883224249?e=1724889600&v=beta&t=es_ZPDBdhzBh8R53zjmid5okiqr2n5AdPYEUY8YvcLs",
+      "https://media.licdn.com/dms/image/D5603AQGZIrxbD16qwA/profile-displayphoto-shrink_400_400/0/1670678932973?e=1722470400&v=beta&t=j5IUMh9-DjDRBrLtl0OT6QQYL7PtYnmoa4yBVbRsZA0",
     name: "Akshay Sakinam",
     title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/akshay-sakinam-516502255/",
