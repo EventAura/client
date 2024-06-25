@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { footerNavs } from "../../constants";
-import Logo from "../../../public/tesract-main.png";
+import Logo from "../../assets/tesract-main.png";
 import { Twitter, Facebook, LinkedinIcon } from "lucide-react";
 import ScrollToTopButton from "./utils/ScrollToTopButton";
 

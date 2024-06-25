@@ -1,7 +1,7 @@
 import React from "react";
 import { workflow } from "../../constants";
 import { CheckCircle2 } from "lucide-react";
-import PhonePayLogo from "../../../public/PhonePay.png";
+import PhonePayLogo from "../../assets/PhonePay.png";
 
 const WorkFlow = () => {
   return (
@@ -10,13 +10,12 @@ const WorkFlow = () => {
         <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 lg:flex gap-16">
           <div className="lg:w-1/2 lg:flex lg:items-center">
             <img
-              data-src={PhonePayLogo}
-              className="lazyload w-full shadow-2xl rounded-lg border transform hover:scale-105 transition-transform duration-500"
+              src={PhonePayLogo}
+              className="w-full shadow-2xl rounded-lg border transform hover:scale-105 transition-transform duration-500"
               style={{
                 boxShadow:
                   "0 20px 40px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.3), 0 5px 10px rgba(0, 0, 0, 0.2)",
               }}
-              alt="PhonePay Logo"
             />
           </div>
           <div className="lg:w-1/2">
