@@ -1,5 +1,5 @@
 import React from "react";
-import robotPhoto from "../../assets/robot.png";
+import robotPhoto from "../../../public/robot.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -31,8 +31,8 @@ const HeroSection = () => {
           </div>
           <div className="flex-1 text-center mt-7 lg:mt-0 lg:ml-3">
             <img
-              src={robotPhoto}
-              className="w-full mx-auto sm:w-10/12 lg:w-full hover:scale-105 transition-transform duration-500 ease-in-out"
+              data-src={robotPhoto}
+              className="lazyload w-full mx-auto sm:w-10/12 lg:w-full hover:scale-105 transition-transform duration-500 ease-in-out"
               alt="Event Management Robot"
             />
           </div>

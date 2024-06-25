@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/navLogo.png";
+import logo from "../../../public/navLogo.png";
 import { navItems } from "../../constants";
 import { Menu, X } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
