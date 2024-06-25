@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { tailwind } from "tailwindcss";
+import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
