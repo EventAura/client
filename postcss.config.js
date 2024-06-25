@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwind from "tailwindcss";
+import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import purgecss from "@fullhuman/postcss-purgecss";
 import cssnano from "cssnano";
@@ -8,7 +8,7 @@ import cssnano from "cssnano";
 export default defineConfig({
   plugins: [
     react(),
-    tailwind(),
+    tailwindcss(),
     autoprefixer(),
     purgecss({
       content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
