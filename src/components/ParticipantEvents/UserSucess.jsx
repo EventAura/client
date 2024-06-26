@@ -158,7 +158,7 @@ const UserSucess = () => {
                     Transcation Id
                   </dt>
                   <dd className=" sm:col-span-2 dark:text-gray-100">
-                    {data.paymentData.data.transactionId
+                    {data?.paymentData?.data?.transactionId
                       ? data.paymentData.data.transactionId
                       : "-NA- "}
                   </dd>
