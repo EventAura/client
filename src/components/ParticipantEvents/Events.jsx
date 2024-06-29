@@ -46,7 +46,7 @@ const Events = () => {
   return (
     <>
       <div className="flex items-center justify-center mt-5">
-        <span className="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700 dark:bg-emerald-700 dark:text-emerald-100">
+        <span className="inline-flex items-center justify-center rounded-full  px-2.5 py-0.5     bg-emerald-700 text-emerald-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -72,7 +72,7 @@ const Events = () => {
             return (
               <article
                 key={event._id}
-                className="m-5 flex flex-col transition hover:shadow-2xl dark:shadow-gray-800/25 border border-gray-800 rounded-3xl p-3 w-full md:w-1/2 lg:w-1/3"
+                className="m-5 flex flex-col transition hover:shadow-2xl shadow-gray-800/25 border border-gray-800 rounded-3xl p-3 w-full md:w-1/2 lg:w-1/3"
               >
                 <div className="flex items-center justify-between gap-4 p-2">
                   <span className="text-xs font-semibold uppercase  text-gray-200">
@@ -110,7 +110,7 @@ const Events = () => {
       </div>
 
       <div className="flex items-center justify-center mt-5">
-        <span className="inline-flex items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700 dark:bg-amber-700 dark:text-amber-100">
+        <span className="inline-flex items-center justify-center rounded-full  px-2.5 py-0.5  bg-amber-700 text-amber-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
