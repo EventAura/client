@@ -35,42 +35,42 @@ const EventsDetail = () => {
       <>
         <div
           role="status"
-          className="max-w md:m-10 m-5 p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700"
+          className="max-w md:m-10 m-5 p-4 space-y-4 border  divide-y  rounded shadow animate-pulse divide-gray-700 md:p-6 border-gray-700"
         >
           <div className="flex items-center justify-between">
             <div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-              <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+              <div className="w-32 h-2  rounded-full bg-gray-700"></div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+            <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
           </div>
           <div className="flex items-center justify-between pt-4">
             <div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-              <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+              <div className="w-32 h-2  rounded-full bg-gray-700"></div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+            <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
           </div>
           <div className="flex items-center justify-between pt-4">
             <div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-              <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+              <div className="w-32 h-2  rounded-full bg-gray-700"></div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+            <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
           </div>
           <div className="flex items-center justify-between pt-4">
             <div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-              <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+              <div className="w-32 h-2  rounded-full bg-gray-700"></div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+            <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
           </div>
           <div className="flex items-center justify-between pt-4">
             <div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-              <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+              <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+              <div className="w-32 h-2  rounded-full bg-gray-700"></div>
             </div>
-            <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+            <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
           </div>
           <span className="sr-only">Loading...</span>
         </div>
@@ -102,73 +102,63 @@ const EventsDetail = () => {
               </div>
             </div>
           </header>
-          <div className="flow-root rounded-lg border border-gray-100 py-3 shadow-sm dark:border-gray-700 mx-7 sm:mx-28">
-            <dl className="-my-3 divide-y divide-gray-100 text-sm dark:divide-gray-700">
+          <div className="flow-root rounded-lg border  py-3 shadow-sm border-gray-700 mx-7 sm:mx-28">
+            <dl className="-my-3 divide-y  text-sm divide-gray-700">
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
-                  What event ? 🤔
-                </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dt className="font-medium  text-white">What event ? 🤔</dt>
+                <dd className=" sm:col-span-2 text-gray-200">
                   {data.eventName}
                 </dd>
               </div>
 
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
+                <dt className="font-medium  text-white">
                   Who is Conducting ❓❓
                 </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dd className=" sm:col-span-2 text-gray-200">
                   {data.eventHostedBy}
                 </dd>
               </div>
 
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
-                  Where 📍
-                </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dt className="font-medium  text-white">Where 📍</dt>
+                <dd className=" sm:col-span-2 text-gray-200">
                   {data.eventVenue}
                 </dd>
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-semibold  dark:text-white">
+                <dt className="font-semibold  text-white">
                   Location 📌 (Google Maps Link)
                 </dt>
-                <dd className=" sm:col-span-2 dark:text-gray-100">
+                <dd className=" sm:col-span-2 text-gray-100">
                   <>{<CopyButton text={data.eventVenueUrl} />}</>
                 </dd>
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
-                  When ? 🕓
-                </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dt className="font-medium  text-white">When ? 🕓</dt>
+                <dd className=" sm:col-span-2 text-gray-200">
                   <FormattedDate dateString={data.eventDate} />
                 </dd>
               </div>
 
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
-                  How much? 💸
-                </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dt className="font-medium  text-white">How much? 💸</dt>
+                <dd className=" sm:col-span-2 text-gray-200">
                   {data.eventPrice == 0 ? "FREE" : <>₹{data.eventPrice}</>}
                 </dd>
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
+                <dt className="font-medium  text-white">
                   Last Date to apply ? 🎇
                 </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dd className=" sm:col-span-2 text-gray-200">
                   <FormattedDate dateString={data.eventLastDate} />
                 </dd>
               </div>
 
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                <dt className="font-medium text-gray-900 dark:text-white">
-                  Why this event ?
-                </dt>
-                <dd className="text-gray-700 sm:col-span-2 dark:text-gray-200">
+                <dt className="font-medium  text-white">Why this event ?</dt>
+                <dd className=" sm:col-span-2 text-gray-200">
                   {data.eventDescription}
                 </dd>
               </div>

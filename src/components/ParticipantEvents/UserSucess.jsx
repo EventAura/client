@@ -30,52 +30,52 @@ const UserSucess = () => {
         <div className=" max-h-screen">
           <div className="mt-7">
             <div role="status" className="animate-pulse">
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 max-w-[640px] mb-2.5 mx-auto"></div>
-              <div className="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[540px]"></div>
-              <div className="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[500px] mt-2"></div>
-              <div className="h-2.5 mx-auto bg-gray-300 rounded-full dark:bg-gray-700 max-w-[450px] mt-2"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 max-w-[640px] mb-2.5 mx-auto"></div>
+              <div className="h-2.5 mx-auto  rounded-full bg-gray-700 max-w-[540px]"></div>
+              <div className="h-2.5 mx-auto  rounded-full bg-gray-700 max-w-[500px] mt-2"></div>
+              <div className="h-2.5 mx-auto  rounded-full bg-gray-700 max-w-[450px] mt-2"></div>
 
               <span className="sr-only">Loading...</span>
             </div>
           </div>
           <div
             role="status"
-            className="max-w md:m-10 m-5 p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700"
+            className="max-w md:m-10 m-5 p-4 space-y-4 border  divide-y  rounded shadow animate-pulse divide-gray-700 md:p-6 border-gray-700"
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+                <div className="w-32 h-2  rounded-full bg-gray-700"></div>
               </div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
             </div>
             <div className="flex items-center justify-between pt-4">
               <div>
-                <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+                <div className="w-32 h-2  rounded-full bg-gray-700"></div>
               </div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
             </div>
             <div className="flex items-center justify-between pt-4">
               <div>
-                <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+                <div className="w-32 h-2  rounded-full bg-gray-700"></div>
               </div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
             </div>
             <div className="flex items-center justify-between pt-4">
               <div>
-                <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+                <div className="w-32 h-2  rounded-full bg-gray-700"></div>
               </div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
             </div>
             <div className="flex items-center justify-between pt-4">
               <div>
-                <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
-                <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                <div className="h-2.5  rounded-full bg-gray-600 w-24 mb-2.5"></div>
+                <div className="w-32 h-2  rounded-full bg-gray-700"></div>
               </div>
-              <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+              <div className="h-2.5  rounded-full bg-gray-700 w-12"></div>
             </div>
             <span className="sr-only">Loading...</span>
           </div>
@@ -109,63 +109,53 @@ const UserSucess = () => {
                 </div>
               </div>
             </header>
-            <div className="flow-root rounded-lg border border-gray-100 py-3 shadow-sm dark:border-gray-700 mx-7 sm:mx-20  ">
-              <dl className="-my-3 divide-y divide-gray-100 text-sm dark:divide-gray-700 ">
+            <div className="flow-root rounded-lg border  py-3 shadow-sm border-gray-700 mx-7 sm:mx-20  ">
+              <dl className="-my-3 divide-y  text-sm divide-gray-700 ">
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className=" font-semibold dark:text-white">Event Name</dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className=" font-semibold text-white">Event Name</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {" "}
                     {data?.eventName}{" "}
                   </dd>
                 </div>
 
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">Name</dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
-                    {data?.name}
-                  </dd>
+                  <dt className="font-semibold  text-white">Name</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">{data?.name}</dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">College</dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className="font-semibold  text-white">College</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {data.college ? data.college : "Not Provided"}
                   </dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">
-                    Roll Number
-                  </dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className="font-semibold  text-white">Roll Number</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {data.rollNumber ? data.rollNumber : "Not Provided"}
                   </dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">
-                    Phone Number
-                  </dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className="font-semibold  text-white">Phone Number</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {data.phoneNumber}
                   </dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">email</dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
-                    {data.email}
-                  </dd>
+                  <dt className="font-semibold  text-white">email</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">{data.email}</dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">
-                    Transcation Id
-                  </dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className="font-semibold  text-white">Transcation Id</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {data?.paymentData?.data?.transactionId
                       ? data.paymentData.data.transactionId
                       : "-NA- "}
                   </dd>
                 </div>
                 <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                  <dt className="font-semibold  dark:text-white">Price</dt>
-                  <dd className=" sm:col-span-2 dark:text-gray-100">
+                  <dt className="font-semibold  text-white">Price</dt>
+                  <dd className=" sm:col-span-2 text-gray-100">
                     {data.eventPrice === "0" ? "FREE" : data.eventPrice}
                   </dd>
                 </div>

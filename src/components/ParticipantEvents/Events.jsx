@@ -75,21 +75,21 @@ const Events = () => {
                 className="m-5 flex flex-col transition hover:shadow-2xl dark:shadow-gray-800/25 border border-gray-800 rounded-3xl p-3 w-full md:w-1/2 lg:w-1/3"
               >
                 <div className="flex items-center justify-between gap-4 p-2">
-                  <span className="text-xs font-semibold uppercase text-gray-900 dark:text-gray-200">
+                  <span className="text-xs font-semibold uppercase  text-gray-200">
                     {year}
                   </span>
-                  <span className="flex-1 h-px bg-gray-900/10 dark:bg-white/10"></span>
-                  <span className="text-xs font-semibold uppercase text-gray-900 dark:text-gray-200">
+                  <span className="flex-1 h-px  bg-white/10"></span>
+                  <span className="text-xs font-semibold uppercase  text-gray-200">
                     {formattedDate}
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col justify-between mt-4">
-                  <div className="border-t border-gray-900/10 p-4 sm:p-6 dark:border-white/10">
-                    <h3 className="font-bold uppercase text-gray-900 dark:text-white text-lg">
+                  <div className="border-t  p-4 sm:p-6 border-white/10">
+                    <h3 className="font-bold uppercase  text-white text-lg">
                       {event.eventName}
                     </h3>
-                    <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-600 dark:text-gray-300">
+                    <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-300">
                       {event.eventDescription}
                     </p>
                   </div>
@@ -139,18 +139,18 @@ const Events = () => {
                 className="m-5 flex flex-col transition hover:shadow-2xl dark:shadow-gray-800/25 border border-gray-800 rounded-3xl p-3 w-full md:w-1/2 lg:w-1/3"
               >
                 <div className="flex items-center justify-between gap-4 p-2">
-                  <span className="text-xs font-semibold uppercase text-gray-900 dark:text-gray-200">
+                  <span className="text-xs font-semibold uppercase  dark:text-gray-200">
                     {year}
                   </span>
                   <span className="flex-1 h-px bg-gray-900/10 dark:bg-white/10"></span>
-                  <span className="text-xs font-semibold uppercase text-gray-900 dark:text-gray-200">
+                  <span className="text-xs font-semibold uppercase  dark:text-gray-200">
                     {formattedDate}
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col justify-between mt-4">
                   <div className="border-t border-gray-900/10 p-4 sm:p-6 dark:border-white/10">
-                    <h3 className="font-bold uppercase text-gray-900 dark:text-white text-lg">
+                    <h3 className="font-bold uppercase  dark:text-white text-lg">
                       {event.eventName}
                     </h3>
                     <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-600 dark:text-gray-300">
