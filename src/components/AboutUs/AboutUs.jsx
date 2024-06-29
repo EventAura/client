@@ -7,7 +7,7 @@ const AboutUs = () => {
     <>
       <section className=" relative overflow-hidden">
         <div className="py-12 px-4 mx-auto max-w-screen-xl text-center lg:py-20 z-10 relative">
-          <h1 className="mb-6 text-4xl font-bold tracking-tight leading-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-indigo-600">
+          <h1 className="mb-6 text-4xl font-bold tracking-tight leading-tight  md:text-5xl lg:text-6xl text-indigo-600">
             Elevate Your Events with EventAura
           </h1>
           <p className="mb-10 text-lg font-medium text-gray-400 lg:text-xl sm:px-8 lg:px-32 dark:text-gray-400">
@@ -31,8 +31,8 @@ const AboutUs = () => {
       </section>
       <section className="py-14">
         <div class="container mx-auto px-4 md:px-8">
-          <div class="max-w-xl">
-            <h3 class="text-3xl font-semibold text-indigo-700 sm:text-4xl">
+          <div class="">
+            <h3 class="text-3xl font-semibold text-indigo-700 sm:text-4xl text-center">
               Meet Our Team
             </h3>
             <p class="mt-3 text-gray-400">
@@ -42,7 +42,7 @@ const AboutUs = () => {
               the faces behind our success.
             </p>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 container">
             <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {team.map((item, idx) => (
                 <li key={idx} className="flex gap-4 items-center">
@@ -57,7 +57,7 @@ const AboutUs = () => {
                     <h4 className="text-gray-100 font-semibold sm:text-lg">
                       {item.name}
                     </h4>
-                    <p className="text-indigo-600">{item.title}</p>
+                    <p className="text-indigo-600 text-wrap">{item.title}</p>
                     <div className="mt-3 flex gap-4 text-gray-400">
                       <a href={item.twitter}>
                         <svg
