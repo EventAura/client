@@ -304,8 +304,8 @@ const EventRegistration = () => {
                   </span>
                 </p>
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold text-gray-200">
-                    Important Information
+                  <h4 className="text-lg font-semibold text-gray-200 ">
+                    *Important Information*
                   </h4>
                   <ul className="list-disc list-inside text-gray-400 mt-2 space-y-1">
                     <li>
