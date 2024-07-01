@@ -155,7 +155,7 @@ const EventRegistration = () => {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Your Name *"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -174,7 +174,7 @@ const EventRegistration = () => {
               <div className="relative">
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Email *"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -193,7 +193,7 @@ const EventRegistration = () => {
               <div className="relative">
                 <input
                   type="tel"
-                  placeholder="Phone Number"
+                  placeholder="Phone Number *"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
@@ -278,15 +278,19 @@ const EventRegistration = () => {
               <div className="mt-4 text-sm text-gray-400 space-y-2">
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Event Name:</span>
-                  <span className="text-gray-300">{data?.eventName}</span>
+                  <span className="text-gray-300 font-extrabold">
+                    {data?.eventName}
+                  </span>
                 </p>
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Venue:</span>
-                  <span className="text-gray-300">{data?.eventVenue}</span>
+                  <span className="text-gray-400 font-bold">
+                    {data?.eventVenue}
+                  </span>
                 </p>
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Cost:</span>
-                  <span className="text-gray-300">
+                  <span className="text-indigo-600 font-semibold">
                     {" "}
                     {data.eventPrice == "0" ? (
                       <>
@@ -305,22 +309,22 @@ const EventRegistration = () => {
                   </h4>
                   <ul className="list-disc list-inside text-gray-400 mt-2 space-y-1">
                     <li>
-                      You will receive a confirmation email after successfully
-                      registering for the event.
+                      Upon successful event registration, please download your
+                      ticket from the success page.
                     </li>
                     <li>
-                      A QR code and a message from the event organizer will be
-                      included in the email.
+                      You will also receive a confirmation email containing a QR
+                      code and a message from the event organizer.
                     </li>
                     <li>
                       If you face any problems, escalate them to{" "}
                       <a
-                        href="mailto:vedasolutionshyderabad@gmail.com"
+                        href="mailto:support@eventaura.tech"
                         className="text-indigo-500"
                       >
-                        vedasolutionshyderabad@gmail.com
-                      </a>
-                      .
+                        support@eventaura.tech
+                      </a>{" "}
+                      for assistance.
                     </li>
                     <li>
                       Check your email regularly for any updates or changes
