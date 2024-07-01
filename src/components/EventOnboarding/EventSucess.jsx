@@ -40,7 +40,7 @@ const Sucess = () => {
           </div>
           <div
             role="status"
-            className="max-w md:m-10 m-5 p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse divide-gray-700 md:p-6 border-gray-700"
+            className="max-w md:m-10 m-5 p-4 space-y-4 border  divide-y  rounded shadow animate-pulse divide-gray-700 md:p-6 border-gray-700"
           >
             <div className="flex items-center justify-between">
               <div>
