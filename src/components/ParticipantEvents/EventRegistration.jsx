@@ -278,19 +278,15 @@ const EventRegistration = () => {
               <div className="mt-4 text-sm text-gray-400 space-y-2">
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Event Name:</span>
-                  <span className="text-gray-300 font-extrabold">
-                    {data?.eventName}
-                  </span>
+                  <span className="text-gray-300 ">{data?.eventName}</span>
                 </p>
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Venue:</span>
-                  <span className="text-gray-400 font-bold">
-                    {data?.eventVenue}
-                  </span>
+                  <span className="text-gray-300 ">{data?.eventVenue}</span>
                 </p>
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Cost:</span>
-                  <span className="text-indigo-600 font-semibold">
+                  <span className="text-gray-300 ">
                     {" "}
                     {data.eventPrice == "0" ? (
                       <>
