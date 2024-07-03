@@ -14,7 +14,7 @@ const UiSection = () => {
               <span className="opacity-95">Experience!</span>
             </h3>
             <p className="mt-3 text-gray-300">
-              our Aura UI delivers an unparalleled experience with its sleek
+              Our Aura UI delivers an unparalleled experience with its sleek
               design and intuitive functionality
             </p>
           </div>
