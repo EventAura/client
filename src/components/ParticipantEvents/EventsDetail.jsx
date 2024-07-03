@@ -85,13 +85,9 @@ const EventsDetail = () => {
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
               <div className="sm:flex sm:items-center sm:justify-center">
                 <div className="text-center">
-                  <h1 className="text-2xl font-bold text-indigo-700 sm:text-3xl opacity-80 ">
-                    {data.eventHostedBy}
-                  </h1>
-                  <p className="mt-1.5 text-base text-gray-200">presnets 🎉</p>
-                  <p className="mt-1.5 text-2xl sm:text-3xl  text-indigo-600">
+                  <h1 className="mt-1.5 text-4xl sm:text-4xl font-semibold tracking-tight leading-tight  text-indigo-600">
                     {data.eventName}
-                  </p>
+                  </h1>
                   <p className="mt-1.5 text-xs text-gray-200">
                     ✨Amazing isn't it✨
                   </p>

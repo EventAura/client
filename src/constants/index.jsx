@@ -131,7 +131,7 @@ export const team = [
   {
     avatar:
       "https://media.licdn.com/dms/image/D5603AQFVRgQq0ObZCg/profile-displayphoto-shrink_400_400/0/1697024171061?e=1722470400&v=beta&t=GEJ7TsLeoaI_Zhvmosv6nibvf-VOchVD27FL8kP2yQE",
-    name: "RUDRAVALLYVARUNHARINATH",
+    name: "Varun Harinath",
     title: "Co-founder & Lead Dev. ",
     linkedin: "https://www.linkedin.com/in/varun-harinath/",
     twitter: "javascript:void(0)",
@@ -145,26 +145,19 @@ export const team = [
     twitter: "javascript:void(0)",
   },
   {
-    avatar: "https://randomuser.me/api/portraits/men/46.jpg",
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    name: "Reshmi Kumari",
+    title: "Head of Business Development",
+    linkedin: "https://www.linkedin.com/in/reshmi-kumari-b2887627a",
+    twitter: "javascript:void(0)",
+  },
+  {
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
     name: "Selva Geeta Velan",
     title: "Social Media Manager",
     linkedin: "javascript:void(0)",
-    twitter: "javascript:void(0)",
-  },
-  {
-    avatar:
-      "https://media.licdn.com/dms/image/D5603AQFmrsIDUYlGag/profile-displayphoto-shrink_400_400/0/1713345468327?e=1722470400&v=beta&t=nP-LUAkm-9R5emm6hw14Plnx36UP8kv6smpvrd4eU7E",
-    name: "Akshay Rachakonda",
-    title: "Frontend Developer",
-    linkedin: "https://www.linkedin.com/in/akshay-rachakonda-a92bb524a/",
-    twitter: "javascript:void(0)",
-  },
-  {
-    avatar:
-      "https://media.licdn.com/dms/image/D5603AQGZIrxbD16qwA/profile-displayphoto-shrink_400_400/0/1670678932973?e=1722470400&v=beta&t=j5IUMh9-DjDRBrLtl0OT6QQYL7PtYnmoa4yBVbRsZA0",
-    name: "Akshay Sakinam",
-    title: "Frontend Developer",
-    linkedin: "https://www.linkedin.com/in/akshay-sakinam-516502255/",
     twitter: "javascript:void(0)",
   },
 ];

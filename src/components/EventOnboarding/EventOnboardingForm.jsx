@@ -248,7 +248,8 @@ const EventOnboardingForm = () => {
               value={eventVenueUrl}
               onChange={(e) => setEventVenueUrl(e.target.value)}
               placeholder="https://example.com (Google Maps URL)"
-              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1"
+              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1 disabled:cursor-not-allowed disabled:bg-gray-500"
+              disabled={isVirtual}
             />
           </div>
           <div>
@@ -345,7 +346,8 @@ const EventOnboardingForm = () => {
               value={eventManagerUPI}
               onChange={(e) => setEventManagerUPI(e.target.value)}
               required
-              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1"
+              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1 disabled:cursor-not-allowed disabled:bg-gray-600"
+              disabled={freeEventCheckbox}
             />
           </div>
           <div>

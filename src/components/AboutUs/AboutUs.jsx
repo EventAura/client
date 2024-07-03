@@ -32,10 +32,10 @@ const AboutUs = () => {
       <section className="py-14">
         <div class="container mx-auto px-4 md:px-8">
           <div class="">
-            <h3 class="text-3xl font-semibold text-indigo-700 sm:text-4xl text-center">
+            <h3 class="text-3xl font-semibold text-indigo-600 tracking-tight leading-tight sm:text-4xl text-center pb-2">
               Meet Our Team
             </h3>
-            <p class="mt-3 text-gray-400">
+            <p class="mt-3 text-gray-300 px-4">
               Meet the talented individuals driving our company forward. With
               unique skills and a shared passion for innovation, our team
               delivers exceptional results for clients and partners. Discover

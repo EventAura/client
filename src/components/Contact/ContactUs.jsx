@@ -69,7 +69,7 @@ const ContactUs = () => {
                         />
                       </svg>
                     </div>
-                    <p>+91 91826-63484 Sindhu Ravuri</p>
+                    <p>+91 91826-63484 (Sindhu Ravuri)</p>
                   </li>
                   <li className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">
