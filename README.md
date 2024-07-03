@@ -54,7 +54,7 @@ The EventAura Event Management System is a comprehensive platform designed to fa
    npm run dev
    ```
 
-2. Access the application through the provided URL, typically [https://tesract.vercel.app/](https://tesract.vercel.app/).
+2. Access the application through the provided URL, typically [https://eventaura.tech/](https://eventaura.tech/).
 
 ### Deployment
 
