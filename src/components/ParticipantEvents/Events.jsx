@@ -68,7 +68,8 @@ const Events = () => {
       <div className="flex flex-wrap justify-center">
         {eventData.map((event) => {
           const { year, formattedDate } = formatDate(event.eventDate);
-          if (event.eventStaus) {
+          const eventdate = new Date(event.eventDate);
+          if (event.eventDate > new Date(Date.now()).toISOString()) {
             return (
               <article
                 key={event._id}
@@ -132,7 +133,7 @@ const Events = () => {
       <div className="flex flex-wrap justify-center">
         {eventData.map((event) => {
           const { year, formattedDate } = formatDate(event.eventDate);
-          if (!event.eventStaus) {
+          if (event.eventDate < new Date(Date.now()).toISOString()) {
             return (
               <article
                 key={event._id}
