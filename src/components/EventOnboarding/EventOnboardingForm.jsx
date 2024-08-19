@@ -29,6 +29,9 @@ const EventOnboardingForm = () => {
   const [freeEventCheckbox, setFreeEventCheckbox] = useState(false);
   const [isVirtual, setIsVirtual] = useState(false);
 
+
+  const [validationError, setValidationError] = useState("");
+
   const handleEventLastDate = (date) => {
     const currentDate = Date.now();
 
@@ -56,6 +59,10 @@ const EventOnboardingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (eventMailDescription.trim() === "") {
+      setValidationError("This field is required.");
+      return;
+    }
     setSpinner(true);
     const salt = bcrypt.genSaltSync(10);
     const adminHashedPassword = bcrypt.hashSync(eventAdminPassword, salt);
@@ -82,6 +89,7 @@ const EventOnboardingForm = () => {
         "https://tesract-server.onrender.com/event",
         data
       );
+      console.log("Form submitted with:", eventMailDescription);
       if (response.data.message) {
         setSpinner(false);
         navigate(
@@ -140,7 +148,7 @@ const EventOnboardingForm = () => {
             <p className="block text-sm font-medium mb-2">
               (The same message will be sent to the registered users via email)
             </p>
-            <ReactQuill
+            {/* <ReactQuill
               value={eventMailDescription}
               onChange={(content, delta, source, editor) =>
                 setEventMailDescription(editor.getHTML())
@@ -179,8 +187,55 @@ const EventOnboardingForm = () => {
                 "direction",
                 "clean",
               ]}
+              placeholder="Compose an epic..."
               className="w-full rounded-2xl  text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1"
+            /> */}
+            <ReactQuill
+              value={eventMailDescription}
+              onChange={(content, delta, source, editor) => {
+                setEventMailDescription(editor.getHTML());
+                setValidationError(""); // Clear error when user starts typing
+              }}
+              modules={{
+                toolbar: [
+                  [{ header: "1" }, { header: "2" }, { font: [] }],
+                  [{ list: "ordered" }, { list: "bullet" }],
+                  ["bold", "italic", "underline", "strike"],
+                  [{ color: [] }, { background: [] }],
+                  [{ align: [] }],
+                  ["blockquote", "code-block"],
+                  [{ script: "sub" }, { script: "super" }],
+                  [{ indent: "-1" }, { indent: "+1" }],
+                  [{ direction: "rtl" }],
+                  ["clean"],
+                ],
+              }}
+              formats={[
+                "header",
+                "font",
+                "list",
+                "bullet",
+                "bold",
+                "italic",
+                "underline",
+                "strike",
+                "color",
+                "background",
+                "align",
+                "blockquote",
+                "code-block",
+                "script",
+                "indent",
+                "direction",
+                "clean",
+              ]}
+              placeholder="Compose an epic..."
+              className="w-full rounded-2xl text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1"
             />
+
+            {validationError && (
+              <div className="text-red-500 text-sm mt-2">{validationError}</div>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">
