@@ -50,7 +50,12 @@ const ContactUs = () => {
                         />
                       </svg>
                     </div>
-                    <p>Support@eventaura.tech</p>
+                    {/* <!-- Updated email address to include a mailto link --> */}
+                    <p>
+                      <a href="mailto:support@eventaura.tech">
+                        Support@eventaura.tech
+                      </a>
+                    </p>
                   </li>
                   <li className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">
