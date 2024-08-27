@@ -122,23 +122,22 @@ export const pricingOptions = [
 export const team = [
   {
     avatar:
-      "https://media.licdn.com/dms/image/D5603AQH3m_VqfMjRXQ/profile-displayphoto-shrink_400_400/0/1690730441108?e=1722470400&v=beta&t=PS_ZyX-SSbmD0cs3XZuVX_o9t5tU8R-tbKbfEUCPaY0",
-    name: "Sindhu Ravuri",
+    "https://media.licdn.com/dms/image/v2/D5603AQH3m_VqfMjRXQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690730441108?e=1729728000&v=beta&t=xhUeq_UArBU9Qky2ZW6ccfIPxZHk_22Tde3Oekfrubs",    name: "Sindhu Ravuri",
     title: "CEO , CFO & Chief Marketing Officer (CMO)",
     linkedin: "https://www.linkedin.com/in/sindhu-ravuri/",
     twitter: "javascript:void(0)",
   },
   {
     avatar:
-      "https://media.licdn.com/dms/image/D5603AQFVRgQq0ObZCg/profile-displayphoto-shrink_400_400/0/1697024171061?e=1722470400&v=beta&t=GEJ7TsLeoaI_Zhvmosv6nibvf-VOchVD27FL8kP2yQE",
-    name: "Varun Harinath",
+    "https://media.licdn.com/dms/image/v2/D5603AQFVRgQq0ObZCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697024171061?e=1729728000&v=beta&t=W1kJpmDTr4WV0Dm2Myt0BuhJUZORnehOwi0CqqBwZPg",    name: "Varun Harinath",
     title: "Co-founder & Lead Dev. ",
     linkedin: "https://www.linkedin.com/in/varun-harinath/",
     twitter: "javascript:void(0)",
   },
   {
     avatar:
-      "https://media.licdn.com/dms/image/D5603AQESlx66wwEMJA/profile-displayphoto-shrink_400_400/0/1708603457057?e=1722470400&v=beta&t=Wy_dqLT0HHtW8gBnEFhf6PKSJzR7mK9oEEU8kveAQQU",
+
+    "https://media.licdn.com/dms/image/v2/D5603AQESlx66wwEMJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708603457057?e=1729728000&v=beta&t=Rzmg4Avmnnzm565HVhLnegWHG4PiJI6kLDAlSxo_S5o",
     name: "Sarhtak Aitha",
     title: "CTO & Technology Team Lead",
     linkedin: "https://www.linkedin.com/in/sarthak-aitha-943534252/",
@@ -154,7 +153,7 @@ export const team = [
   },
   {
     avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "https://media.licdn.com/dms/image/v2/D5603AQEubDs8pd6pAQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718550925166?e=1729728000&v=beta&t=5OxsfwP0UdZ-sV1UT8tp0Q9EAdMTQn7wkEYWwhmorjk",
     name: "Selva Geeta Velan",
     title: "Social Media Manager",
     linkedin: "javascript:void(0)",
