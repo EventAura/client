@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { footerNavs } from "../../constants";
-import Logo from "../../../public/tesract-main.png";
+import Logo from "../../../public/main.png";
 import { Twitter, Facebook, LinkedinIcon } from "lucide-react";
 import ScrollToTopButton from "./utils/ScrollToTopButton";
 
@@ -41,7 +41,8 @@ const Footer = () => {
               </li>
 
               <li className="w-10 h-10 flex items-center justify-center">
-                <a href="javascript:void()">
+                {/* <a href="javascript:void()"> */}
+                <a href="https://www.google.co.in/">
                   <Facebook className="w-6 h-6 text-blue-700" />
                 </a>
               </li>
