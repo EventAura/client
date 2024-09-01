@@ -101,6 +101,76 @@ const ContactUs = () => {
           </div>
         </div>
       </main>
+
+      <main className="relative py-28 ">
+        {isMessage && (
+          <div
+            role="alert"
+            className="rounded-xl border border-gray-100 bg-white p-4 mx-16 mb-5"
+            ref={messageRef}
+            tabIndex="-1"
+          >
+            <div className="flex items-start gap-4">
+              <span className="text-red-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 9v2m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+                  />
+                </svg>
+              </span>
+
+              <div className="flex-1">
+                <strong className="block font-medium text-gray-900">
+                  404 Error
+                </strong>
+                <p className="mt-1 text-sm text-gray-700">
+                  Can't Process Your Request, Please Contact us directly.
+                </p>
+              </div>
+
+              <button
+                onClick={() => setMessage(false)}
+                className="text-gray-500 transition hover:text-gray-600"
+              >
+                <span className="sr-only">Dismiss popup</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="h-6 w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
+        
+
+        <div
+          className="absolute inset-0 blur-[118px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]"
+          style={{
+            background:
+              "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
+          }}
+        ></div>
+      </main>
+
     </>
   );
 };
