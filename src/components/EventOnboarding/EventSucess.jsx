@@ -130,7 +130,7 @@ const Sucess = () => {
                     </Link>
 
                     <a
-                      href={`https://tesrct-admin-pannel.vercel.app/secure/v3/dasboard/login/${id}`}
+                      href={`https://admin.eventaura.tech/secure/v3/dasboard/participants/${id}`}
                       className="inline-flex items-center justify-center gap-1.5 rounded-lg border  px-5 py-3 text-gray-100 transition hover:bg-gray-50 hover: hover:border-gray-200 hover:border focus:outline-none focus:ring hover:text-gray-900"
                       type="button"
                     >
