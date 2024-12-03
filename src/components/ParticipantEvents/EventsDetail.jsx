@@ -203,11 +203,13 @@ const EventsDetail = () => {
   const pId = cryptoRandom({ length: 10, type: "url-safe" });
   const postSecureId = cryptoRandom({ length: 10, type: "numeric" });
 
+
   useEffect(() => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
           `https://tesract-server.onrender.com/event/${id}`
+          // `http://localhost:8080/event/${id}`
         );
         setData(response.data.data);
         console.log(response.data.data);
@@ -310,7 +312,7 @@ const EventsDetail = () => {
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
                 <dt className="font-medium text-white">How much? 💸</dt>
                 <dd className="sm:col-span-2 text-gray-200">
-                  {data.eventPrice === 0 ? "FREE" : `₹${data.eventPrice}`}
+                  {data.eventPrice === 0 ? "FREE" : `₹${data.eventPrice[0]} , ₹${data.eventPrice[1]}`}
                 </dd>
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">

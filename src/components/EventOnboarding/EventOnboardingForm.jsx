@@ -15,6 +15,7 @@ const EventOnboardingForm = () => {
   const [eventDescription, setEventDescription] = useState("");
   const [eventVenue, setEventVenue] = useState("");
   const [price, setPrice] = useState("");
+  const [price1, setPrice1] = useState("");
   const [eventVenueUrl, setEventVenueUrl] = useState("");
   const [eventManagerMail, setEventManagerMail] = useState("");
   const [eventManagerPhone, setEventManagerPhone] = useState("");
@@ -80,13 +81,14 @@ const EventOnboardingForm = () => {
       eventPaymentUpi: eventManagerUPI,
       eventHostedBy: eventHostedBy,
       eventSpeaker: eventSpeaker,
-      eventPrice: price,
+      eventPrice: [price, price1],
       eventMailDescription: eventMailDescription,
     };
     console.log(data);
     try {
       const response = await axios.post(
         "https://tesract-server.onrender.com/event",
+        // "http://localhost:8080/event",
         data
       );
       console.log("Form submitted with:", eventMailDescription);
@@ -308,6 +310,7 @@ const EventOnboardingForm = () => {
             />
           </div>
           <div>
+
             <label className="block text-sm font-medium mb-2">Price</label>
             <input
               type="number"
@@ -319,6 +322,21 @@ const EventOnboardingForm = () => {
               title="Please enter a valid price (numbers only)"
               disabled={freeEventCheckbox}
             />
+            <div className="mt-4">
+              <input
+              type="number"
+              value={price1}
+              onChange={(e) => setPrice1(e.target.value)}
+              placeholder=""
+              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1 disabled:cursor-not-allowed disabled:bg-gray-500"
+              pattern="^[0-9]+$"
+              title="Please enter a valid price (numbers only)"
+              disabled={freeEventCheckbox}
+              />
+            </div>
+
+
+
             <label className="inline-flex items-center mt-2">
               <input
                 type="checkbox"
@@ -332,6 +350,10 @@ const EventOnboardingForm = () => {
               <span className="ml-2 text-sm text-gray-200">Free Event</span>
             </label>
           </div>
+
+         
+
+          
 
           <div>
             <label className="block text-sm font-medium mb-2">Event Date</label>

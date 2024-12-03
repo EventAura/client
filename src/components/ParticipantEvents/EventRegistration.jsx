@@ -17,12 +17,17 @@ const EventRegistration = () => {
   const [isAgreed, setIsAgreed] = useState(false);
   const [loading, setLoading] = useState(true);
   const [spinner, setSpinner] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState(null);
+  const handlePriceChange = (price) => {
+    setSelectedPrice(price);
+  };
 
   useEffect(() => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
           `https://tesract-server.onrender.com/event/${eventId}`
+          // `http://localhost:8080/event/${eventId}`
         );
 
         setdata(response.data.data);
@@ -42,12 +47,14 @@ const EventRegistration = () => {
       email,
       rollNumber,
       phoneNumber,
+      eventAmount: selectedPrice,
     };
 
     if ((data && data.eventPrice) == "0") {
       try {
         const response = await axios.post(
           `https://tesract-server.onrender.com/registration/${eventId}`,
+          // `http://localhost:8080/event/${eventId}`,
           Userdata
         );
         console.log(response.data);
@@ -66,6 +73,7 @@ const EventRegistration = () => {
     try {
       const response = await axios.post(
         `https://tesract-server.onrender.com/api/phone-pay/registration/user/${eventId}`,
+        // `http://localhost:8080/api/phone-pay/registration/user/${eventId}`,
         Userdata
       );
       window.open(response.data, "_self");
@@ -85,7 +93,7 @@ const EventRegistration = () => {
       <>
         <div
           role="status"
-          class="w-full min-h-screen flex flex-col items-center justify-center px-2 py-16 sm:px-6 sm:py-24 animate-pulse"
+          className="w-full min-h-screen flex flex-col items-center justify-center px-2 py-16 sm:px-6 sm:py-24 animate-pulse"
         >
           <div class="w-full max-w-md md:max-w-2xl lg:max-w-4xl space-y-8 bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-600 flex flex-col md:flex-row md:space-y-0 md:space-x-8">
             <div class="md:w-1/2 space-y-6">
@@ -294,7 +302,30 @@ const EventRegistration = () => {
                       </>
                     ) : (
                       <>
-                        <p>₹{data.eventPrice}</p>
+                       
+                        {/* <p>₹{data.eventPrice}</p> */}
+
+                        <div>
+                          <p className="font-medium mb-2">Select a Price:</p>
+                          {data.eventPrice.map((price, index) => (
+                            <label key={index} className="block mb-2">
+                              <input
+                                type="radio"
+                                name="eventPrice" // Use the same name for all radio buttons to allow single selection
+                                value={price}
+                                checked={selectedPrice === price}
+                                onChange={() => handlePriceChange(price)}
+                                className="mr-2"
+                                required
+                              />
+                              ₹{price}
+                            </label>
+                          ))}
+                        </div>
+
+                        {/* <div className="mt-4">
+                          <p className="font-medium">Selected Price: ₹{selectedPrice ?? "None"}</p>
+                        </div> */}
                       </>
                     )}
                   </span>
