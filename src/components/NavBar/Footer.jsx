@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { footerNavs } from "../../constants";
-import Logo from "../../../public/tesract-main.png";
+import Logo from "../../../public/main.png";
 import { Twitter, Facebook, LinkedinIcon } from "lucide-react";
 import ScrollToTopButton from "./utils/ScrollToTopButton";
 
@@ -11,7 +11,7 @@ const Footer = () => {
       <footer className="text-gray-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8 mt-24">
         <div className="max-w-3xl sm:mx-auto sm:text-center">
           <div className="flex justify-center">
-            <img src={Logo} className="w-36 h-auto" />
+            <img src={Logo} className="w-10 h-auto" /> <span className="w-30 h-auto font-medium text-2xl pt-1">EventAura</span>
           </div>
           <p className="leading-relaxed  text-base font-light">
             EventAura empowers student-driven communities and college clubs in
@@ -41,13 +41,14 @@ const Footer = () => {
               </li>
 
               <li className="w-10 h-10 flex items-center justify-center">
-                <a href="javascript:void()">
+                {/* <a href="javascript:void()"> */}
+                <a href="https://www.google.co.in/">
                   <Facebook className="w-6 h-6 text-blue-700" />
                 </a>
               </li>
               <li className="w-10 h-10 flex items-center justify-center">
                 <a href="javascript:void()">
-                  <LinkedinIcon className="w-6 h-6 text-blue-700" />
+                  <LinkedinIcon className="w-6 h-6 text-blue-700" onClick={() => window.open('https://www.linkedin.com/company/eventaurainfo/')}/>
                 </a>
               </li>
             </ul>
