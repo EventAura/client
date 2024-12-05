@@ -10,9 +10,9 @@ const EventEULA = () => {
       <section className="space-y-4">
         <h2 className="text-xl md:text-2xl font-semibold">Introduction</h2>
         <p className="font-normal">
-          Welcome to EventAura, a service by Veda Solutions, for managing your
-          events. This document outlines the terms that apply to event managers
-          using our platform.
+          Welcome to EventAura, a service for managing your events. This
+          document outlines the terms that apply to event managers using our
+          platform.
         </p>
       </section>
 
@@ -163,32 +163,30 @@ const EventEULA = () => {
           registered.
         </p>
 
-        <div className="text-gray-100 p-4 md:p-8 lg:p-16 space-y-8 font-bold">
+        <div className="text-gray-100 space-y-8 font-bold">
           <h2 className="text-xl md:text-2xl font-semibold">
             Cancellation Policy
           </h2>
 
-          <section className="space-y-4">
-            <p className="font-normal">
-              <strong className="text-indigo-500">Cancellation Fee:</strong>{" "}
-              EventAura does not charge any cancellation fees to event managers
-              in case of event cancellation.
-            </p>
-            <p className="font-normal">
-              <strong className="text-indigo-500">Non-Refundable Fees:</strong>{" "}
-              Event managers acknowledge that fees paid to EventAura for
-              ticketing services are non-refundable, even in the event of event
-              cancellation. Once fees are paid to EventAura, they will not be
-              refunded under any circumstances.
-            </p>
-            <p className="font-normal">
-              <strong className="text-indigo-500">Event Cancellation:</strong>{" "}
-              In the event that an event needs to be canceled, event managers
-              are not subject to any penalties or cancellation fees from
-              EventAura. However, any fees paid for EventAura's services remain
-              non-refundable.
-            </p>
-          </section>
+          <p className="font-normal">
+            <strong className="text-indigo-500">Cancellation Fee:</strong>{" "}
+            EventAura does not charge any cancellation fees to event managers in
+            case of event cancellation.
+          </p>
+          <p className="font-normal">
+            <strong className="text-indigo-500">Non-Refundable Fees:</strong>{" "}
+            Event managers acknowledge that fees paid to EventAura for ticketing
+            services are non-refundable, even in the event of event
+            cancellation. Once fees are paid to EventAura, they will not be
+            refunded under any circumstances.
+          </p>
+          <p className="font-normal">
+            <strong className="text-indigo-500">Event Cancellation:</strong> In
+            the event that an event needs to be canceled, event managers are not
+            subject to any penalties or cancellation fees from EventAura.
+            However, any fees paid for EventAura's services remain
+            non-refundable.
+          </p>
         </div>
       </section>
     </div>

@@ -29,7 +29,6 @@ const EventOnboardingForm = () => {
   const [freeEventCheckbox, setFreeEventCheckbox] = useState(false);
   const [isVirtual, setIsVirtual] = useState(false);
 
-
   const [validationError, setValidationError] = useState("");
 
   const handleEventLastDate = (date) => {
@@ -147,6 +146,7 @@ const EventOnboardingForm = () => {
             </label>
             <p className="block text-sm font-medium mb-2">
               (The same message will be sent to the registered users via email)
+              (required)
             </p>
             {/* <ReactQuill
               value={eventMailDescription}
