@@ -14,7 +14,6 @@
 //   const pId = cryptoRandom({ length: 10, type: "url-safe" });
 //   const postSecureId = cryptoRandom({ length: 10, type: "numeric" });
 
-
 //   useEffect(() => {
 //     const fetchApi = async () => {
 //       try {
@@ -292,12 +291,30 @@ const EventsDetail = () => {
                   {data.eventVenue}
                 </dd>
               </div>
-              <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+              <div
+                className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4 cursor-pointer"
+                onClick={() => window.open(data.eventVenueUrl, "_blank")}
+              >
                 <dt className="font-semibold text-white">
                   Location 📌 (Google Maps Link)
                 </dt>
-                <dd className="sm:col-span-2 text-gray-100">
-                  <CopyButton text={data.eventVenueUrl} />
+                <dd className="sm:col-span-2 text-gray-100 flex items-center">
+                  {/* Button with a link icon */}
+                  <button className="flex items-center px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 text-white mr-2"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M10 9l5-5 5 5M15 4h4a2 2 0 0 1 2 2v4m-3 3h3a2 2 0 0 1 2 2v4m-3-3l-5 5-5-5M9 20H5a2 2 0 0 1-2-2v-4m3-3H3a2 2 0 0 1-2-2v-4" />
+                    </svg>
+                    Open in Google Maps
+                  </button>
                 </dd>
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
