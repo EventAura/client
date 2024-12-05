@@ -122,43 +122,44 @@ export const pricingOptions = [
 export const team = [
   {
     avatar:
-    "https://media.licdn.com/dms/image/v2/D5603AQH3m_VqfMjRXQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690730441108?e=1729728000&v=beta&t=xhUeq_UArBU9Qky2ZW6ccfIPxZHk_22Tde3Oekfrubs",    name: "Sindhu Ravuri",
-    title: "CEO , CFO & Chief Marketing Officer (CMO)",
+      "https://media.licdn.com/dms/image/v2/D5603AQH3m_VqfMjRXQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690730441108?e=1738800000&v=beta&t=2uui8lnSKDFNuGto04GbTktgcuLVmdx0bLWmmLBgzmk",
+    name: "Sindhu Ravuri",
+    title: "Founder & CEO",
     linkedin: "https://www.linkedin.com/in/sindhu-ravuri/",
     twitter: "javascript:void(0)",
   },
   {
     avatar:
-    "https://media.licdn.com/dms/image/v2/D5603AQFVRgQq0ObZCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1697024171061?e=1729728000&v=beta&t=W1kJpmDTr4WV0Dm2Myt0BuhJUZORnehOwi0CqqBwZPg",    name: "Varun Harinath",
-    title: "Co-founder & Lead Dev. ",
+      "https://media.licdn.com/dms/image/v2/D5603AQFVRgQq0ObZCg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1697024171061?e=1738800000&v=beta&t=sn38uh8QC4Qvq6VRnGuWKJMCSa4_aWowNMnVOK0Ja9o",
+    name: "Varun Harinath",
+    title: "Co-founder & Lead Software Engineer",
     linkedin: "https://www.linkedin.com/in/varun-harinath/",
     twitter: "javascript:void(0)",
   },
   {
     avatar:
-
-    "https://media.licdn.com/dms/image/v2/D5603AQESlx66wwEMJA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708603457057?e=1729728000&v=beta&t=Rzmg4Avmnnzm565HVhLnegWHG4PiJI6kLDAlSxo_S5o",
+      "https://media.licdn.com/dms/image/v2/D5603AQESlx66wwEMJA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708603457057?e=1738800000&v=beta&t=LCLypqcKTBRF6wC5V69ECmEniq9SEA6Zc1cvnD8c7Kk",
     name: "Sarhtak Aitha",
     title: "CTO & Technology Team Lead",
     linkedin: "https://www.linkedin.com/in/sarthak-aitha-943534252/",
     twitter: "javascript:void(0)",
   },
-  {
-    avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    name: "Reshmi Kumari",
-    title: "Head of Business Development",
-    linkedin: "https://www.linkedin.com/in/reshmi-kumari-b2887627a",
-    twitter: "javascript:void(0)",
-  },
-  {
-    avatar:
-    "https://media.licdn.com/dms/image/v2/D5603AQEubDs8pd6pAQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718550925166?e=1729728000&v=beta&t=5OxsfwP0UdZ-sV1UT8tp0Q9EAdMTQn7wkEYWwhmorjk",
-    name: "Selva Geeta Velan",
-    title: "Social Media Manager",
-    linkedin: "javascript:void(0)",
-    twitter: "javascript:void(0)",
-  },
+  // {
+  //   avatar:
+  //     "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+  //   name: "Reshmi Kumari",
+  //   title: "Head of Business Development",
+  //   linkedin: "https://www.linkedin.com/in/reshmi-kumari-b2887627a",
+  //   twitter: "javascript:void(0)",
+  // },
+  // {
+  //   avatar:
+  //   "https://media.licdn.com/dms/image/v2/D5603AQEubDs8pd6pAQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718550925166?e=1729728000&v=beta&t=5OxsfwP0UdZ-sV1UT8tp0Q9EAdMTQn7wkEYWwhmorjk",
+  //   name: "Selva Geeta Velan",
+  //   title: "Social Media Manager",
+  //   linkedin: "javascript:void(0)",
+  //   twitter: "javascript:void(0)",
+  // },
 ];
 
 export const resourcesLinks = [
