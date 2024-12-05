@@ -174,12 +174,18 @@ const EventRegistration = () => {
               <div className="relative">
                 <input
                   type="email"
-                  placeholder="Email *"
+                  placeholder="Enter your email *"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+                <p className="text-sm p-1 text-gray-400">
+                  <em>
+                    You will receive an email shortly. Please check your inbox
+                    or spam folder.
+                  </em>
+                </p>
               </div>
               <div className="relative">
                 <input
@@ -286,7 +292,7 @@ const EventRegistration = () => {
                 </p>
                 <p className="flex justify-between items-center">
                   <span className="font-medium text-gray-300">Cost:</span>
-                  <span className="text-gray-300 ">
+                  <span className="text-gray-300 font-semibold">
                     {" "}
                     {data.eventPrice == "0" ? (
                       <>
@@ -301,7 +307,7 @@ const EventRegistration = () => {
                 </p>
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold text-gray-200 ">
-                    *Important Information*
+                    Important Information
                   </h4>
                   <ul className="list-disc list-inside text-gray-400 mt-2 space-y-1">
                     <li>
