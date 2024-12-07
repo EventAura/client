@@ -16,7 +16,7 @@ const UserSuccess = () => {
         const response = await axios.get(
           `https://tesract-server.onrender.com/participant/${id}`
         );
-        console.log(response.data);
+        console.log(response.data.paymentData);
         setdata(response.data);
         setloading(false);
       } catch (error) {
@@ -112,7 +112,19 @@ const UserSuccess = () => {
     <>
       {data ? (
         <div className="mx-auto max-w-screen-xl" id="pageContent">
-          {data.paymentData?.success ? (
+          {data.paymentData?.success &&
+          ![
+            "PAYMENT_PENDING",
+            "PAYMENT_ERROR",
+            "INTERNAL_SERVER_ERROR",
+            "BAD_REQUEST",
+            "AUTHORIZATION_FAILED",
+            "INTERNAL_SECURITY_BLOCK_1",
+            "INTERNAL_SECURITY_BLOCK_2",
+            "INTERNAL_SECURITY_BLOCK_4",
+            "INTERNAL_SECURITY_BLOCK_5",
+            "INTERNAL_SECURITY_BLOCK_6",
+          ].includes(data.paymentData?.code) ? (
             // Payment Success Content
             <>
               <header>
@@ -234,9 +246,6 @@ const UserSuccess = () => {
             // Payment Failure Content
             <div className="flex justify-center items-center py-12">
               <div className="max-w-lg w-full rounded-lg border border-red-600 bg-red-50 shadow-md p-6 text-center">
-                {/* Error Icon */}
-
-                {/* Title and Description */}
                 <h1 className="mt-4 text-2xl font-semibold text-red-700">
                   Payment Failed ❌
                 </h1>
@@ -245,8 +254,6 @@ const UserSuccess = () => {
                   again or contact our support team with the details below for
                   assistance.
                 </p>
-
-                {/* Transaction Details */}
                 <div className="mt-6 bg-white rounded-md shadow p-4 text-left">
                   <p className="text-gray-800 font-medium">
                     <span className="text-red-700 font-semibold">User ID:</span>{" "}
@@ -259,8 +266,6 @@ const UserSuccess = () => {
                     {data?.paymentData?.data?.transactionId || "Not Available"}
                   </p>
                 </div>
-
-                {/* Support Contact */}
                 <div className="mt-6 text-gray-800">
                   <p className="font-medium">Need help?</p>
                   <p>
