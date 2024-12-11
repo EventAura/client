@@ -57,7 +57,7 @@ const ContactUs = () => {
                       </a>
                     </p>
                   </li>
-                  <li className="flex items-center gap-x-3">
+{/*                   <li className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const ContactUs = () => {
                       </svg>
                     </div>
                     <p>+91 90306-84781 (Varun Harinath)</p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
