@@ -205,9 +205,9 @@ const EventsDetail = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get(
-          `https://tesract-server.onrender.com/event/${id}`
-        );
+        // const response = await axios.get(
+        //   `https://tesract-server.onrender.com/event/${id}`
+        // );
         setData(response.data.data);
         console.log(response.data.data);
 
