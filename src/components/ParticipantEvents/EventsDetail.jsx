@@ -244,7 +244,8 @@ const EventsDetail = () => {
     );
   }
 
-  const isEventClosed = new Date(data.eventLastDate) < new Date();
+  // const isEventClosed = new Date(data.eventLastDate) < new Date();
+  const isEventClosed = true;
 
   return (
     <>
