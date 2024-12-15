@@ -24,25 +24,25 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/company-eula" element={<TermsOfService />} />
           {/* evenet onboading  */}
-          {/* <Route
+          <Route
             path="/secure/v3/Event-On-Boadring"
             element={<EventBoarding />}
-          /> */}
+          />
           {/* success event onboarding */}
-          {/* <Route
+          <Route
             path="/secure/v3/Event-On-Boarding/success/:id"
             element={<EventSucess />}
-          /> */}
+          />
 
           {/* Events Route */}
-          {/* <Route path="/events" element={<Events />} /> */}
+          <Route path="/events" element={<Events />} />
           {/* Events Detail Route */}
-          {/* <Route path="/event/:id" element={<EventsDetail />} /> */}
+          <Route path="/event/:id" element={<EventsDetail />} />
           {/* Paricipant Registration Route */}
-          {/* <Route
+          <Route
             path="/event/secure/v3/:p/:secureId/:id/:eventId/:postSecureId"
             element={<EventRegistration />}
-          /> */}
+          />
           {/* User Sucess Registration */}
           <Route path="/event/:id/success" element={<UserSucess />} />
           <Route path="/contact-us" element={<ContactUs />} />
