@@ -1,21 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 
 const ContactUs = () => {
-  const [isMessage, setMessage] = useState(false);
-  const messageRef = useRef(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setMessage(true); // Set the message to true to show the modal or message
-    // Add any additional logic for form submission here
-  };
-  useEffect(() => {
-    if (isMessage && messageRef.current) {
-      messageRef.current.focus(); // Focus on the popup
-    }
-  }, [isMessage]);
-
   return (
     <>
       <main className="py-14 flex items-center justify-center min-h-screen">
@@ -28,8 +13,7 @@ const ContactUs = () => {
               </p>
               <p>
                 We’re here to help and answer any question you might have. We
-                look forward to hearing from you! Please fill out the form, or
-                use the contact information below.
+                look forward to hearing from you!
               </p>
               <div>
                 <ul className="mt-6 flex flex-col gap-y-6 items-center">
@@ -57,7 +41,7 @@ const ContactUs = () => {
                       </a>
                     </p>
                   </li>
-{/*                   <li className="flex items-center gap-x-3">
+                  {/*                   <li className="flex items-center gap-x-3">
                     <div className="flex-none text-gray-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -102,66 +86,7 @@ const ContactUs = () => {
         </div>
       </main>
 
-      <main className="relative py-28 ">
-        {isMessage && (
-          <div
-            role="alert"
-            className="rounded-xl border border-gray-100 bg-white p-4 mx-16 mb-5"
-            ref={messageRef}
-            tabIndex="-1"
-          >
-            <div className="flex items-start gap-4">
-              <span className="text-red-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v2m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
-                  />
-                </svg>
-              </span>
-
-              <div className="flex-1">
-                <strong className="block font-medium text-gray-900">
-                  404 Error
-                </strong>
-                <p className="mt-1 text-sm text-gray-700">
-                  Can't Process Your Request, Please Contact us directly.
-                </p>
-              </div>
-
-              <button
-                onClick={() => setMessage(false)}
-                className="text-gray-500 transition hover:text-gray-600"
-              >
-                <span className="sr-only">Dismiss popup</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        )}
-        
-
+      <main className="relative py-20 ">
         <div
           className="absolute inset-0 blur-[118px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]"
           style={{
@@ -170,7 +95,6 @@ const ContactUs = () => {
           }}
         ></div>
       </main>
-
     </>
   );
 };
