@@ -210,7 +210,11 @@ const EventRegistration = () => {
               </div>
               <div className="relative">
                 <div className="mb-4">
-                  <label className="inline-flex items-center">
+                  <em className=" pb-7 text-gray-400">
+                    Fields marked with <span className="text-red-500">*</span>{" "}
+                    are required.
+                  </em>
+                  <label className="inline-flex items-center pt-5">
                     <input
                       type="checkbox"
                       className="form-checkbox text-indigo-600 bg-gray-700 border-gray-600"
