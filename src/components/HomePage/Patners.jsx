@@ -30,15 +30,6 @@ const Patners = () => {
             <p className="text-lg text-white font-medium">E-DAM</p>
           </div>
 
-          {/* Grid 4 */}
-          <div className="flex items-center space-x-4 h-32 rounded-lg p-4">
-            <img
-              src="https://i.postimg.cc/rytWR88q/nexus-swarm-logo.jpg"
-              alt="Example Logo"
-              className="w-28 rounded-lg"
-            />
-            <p className="text-lg text-white font-medium">NEXUS SWARM</p>
-          </div>
           {/* Grid 3 */}
           <div className="flex items-center space-x-4 h-32 rounded-lg p-4">
             <img
@@ -48,6 +39,16 @@ const Patners = () => {
             />
             <p className="text-lg text-white font-medium">KURUSHETRA</p>
           </div>
+
+          {/* Grid 4 */}
+          {/* <div className="flex items-center space-x-4 h-32 rounded-lg p-4">
+            <img
+              src="https://i.postimg.cc/DyJkgFrg/example-logo.jpg"
+              alt="Example Logo"
+              className="w-28 rounded-lg"
+            />
+            <p className="text-lg text-white font-medium">EXAMPLE PARTNER</p>
+          </div> */}
 
           {/* Grid 5 */}
           {/* <div className="flex items-center space-x-4 h-32 rounded-lg p-4">

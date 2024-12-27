@@ -255,6 +255,7 @@ const EventsDetail = () => {
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
               <div className="sm:flex sm:items-center sm:justify-center">
                 <div className="text-center">
+                  
                   <h1 className="mt-1.5 text-4xl sm:text-4xl font-semibold tracking-tight leading-tight text-indigo-600">
                     {data.eventName}
                   </h1>
@@ -382,7 +383,7 @@ const EventsDetail = () => {
             </dl>
           </div>
           <div className="flex justify-center">
-            {data.eventStaus === true || !isEventClosed ? (
+            {data.eventStaus === true && !isEventClosed ? (
               <Link
                 to={`/event/secure/v3/${p}/${secureId}/${pId}/${id}/${postSecureId}`}
                 className="flex bg-indigo-600 px-5 py-3 text-center text-sm font-semibold text-gray-100 transition-transform transform hover:bg-indigo-700 hover:scale-105 hover:shadow-lg hover:text-white rounded-3xl my-10 items-center justify-center"
