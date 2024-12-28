@@ -382,7 +382,7 @@ const EventsDetail = () => {
             </dl>
           </div>
           <div className="flex justify-center">
-            {data.eventStaus === true || !isEventClosed ? (
+            {data.eventStaus === true && !isEventClosed ? (
               <Link
                 to={`/event/secure/v3/${p}/${secureId}/${pId}/${id}/${postSecureId}`}
                 className="flex bg-indigo-600 px-5 py-3 text-center text-sm font-semibold text-gray-100 transition-transform transform hover:bg-indigo-700 hover:scale-105 hover:shadow-lg hover:text-white rounded-3xl my-10 items-center justify-center"
