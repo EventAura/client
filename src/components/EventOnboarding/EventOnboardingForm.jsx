@@ -87,7 +87,7 @@ const EventOnboardingForm = () => {
     console.log(data);
     try {
       const response = await axios.post(
-        "https://tesract-server.onrender.com/event",
+        "https://eventaura-server-api.onrender.com/event",
         data
       );
       console.log("Form submitted with:", eventMailDescription);

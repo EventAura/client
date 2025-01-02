@@ -14,7 +14,7 @@ const UserSuccess = () => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
-          `https://tesract-server.onrender.com/participant/${id}`
+          `https://eventaura-server-api.onrender.com/participant/${id}`
         );
         console.log(response.data.paymentData);
         setdata(response.data);

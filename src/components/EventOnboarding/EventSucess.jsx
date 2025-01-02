@@ -13,7 +13,7 @@ const Sucess = () => {
     const fetctApi = async () => {
       try {
         const response = await axios.get(
-          `https://tesract-server.onrender.com/event/${id}`
+          `https://eventaura-server-api.onrender.com/event/${id}`
         );
         console.log(response);
         setLoading(false);
