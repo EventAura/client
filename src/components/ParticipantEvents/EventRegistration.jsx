@@ -22,7 +22,7 @@ const EventRegistration = () => {
     const fetchApi = async () => {
       try {
         const response = await axios.get(
-          `https://tesract-server.onrender.com/event/${eventId}`
+          `https://eventaura-server-api.onrender.com/event/${eventId}`
         );
 
         setdata(response.data.data);
@@ -47,7 +47,7 @@ const EventRegistration = () => {
     if ((data && data.eventPrice) == "0") {
       try {
         const response = await axios.post(
-          `https://tesract-server.onrender.com/registration/${eventId}`,
+          `https://eventaura-server-api.onrender.com/registration/${eventId}`,
           Userdata
         );
         console.log(response.data);
@@ -65,7 +65,7 @@ const EventRegistration = () => {
 
     try {
       const response = await axios.post(
-        `https://tesract-server.onrender.com/api/phone-pay/registration/user/${eventId}`,
+        `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
         Userdata
       );
       window.open(response.data, "_self");

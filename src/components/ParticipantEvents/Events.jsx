@@ -11,7 +11,7 @@ const Events = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.get(
-          "https://tesract-server.onrender.com/event"
+          "https://eventaura-server-api.onrender.com/event"
         );
 
         setEventData(response.data.data);
