@@ -28,6 +28,7 @@ const EventOnboardingForm = () => {
   const [eventMailDescription, setEventMailDescription] = useState("");
   const [freeEventCheckbox, setFreeEventCheckbox] = useState(false);
   const [isVirtual, setIsVirtual] = useState(false);
+  const [eventRegistrationLimit, setEventRegistrationLimit] = useState("");
 
   const [validationError, setValidationError] = useState("");
 
@@ -81,6 +82,7 @@ const EventOnboardingForm = () => {
       eventSpeaker: eventSpeaker,
       eventPrice: price,
       eventMailDescription: eventMailDescription,
+      eventRegistrationLimit: eventRegistrationLimit,
     };
     console.log(data);
     try {
@@ -355,6 +357,19 @@ const EventOnboardingForm = () => {
               dateFormat="yyyy-MM-dd"
               className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1 disabled:cursor-not-allowed disabled:bg-gray-500"
               disabled={eventDate === null}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Event Registration limit
+            </label>
+            <input
+              type="number"
+              id="eventRegistrationLimit"
+              onChange={(e) => setEventRegistrationLimit(e.target.value)}
+              placeholder=""
+              value={eventRegistrationLimit}
+              className="w-full px-3 py-2 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-indigo-500 focus:ring-1"
             />
           </div>
           <div className="md:col-span-2">
