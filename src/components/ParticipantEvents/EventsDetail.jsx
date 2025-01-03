@@ -73,7 +73,8 @@ const EventsDetail = () => {
     );
   }
 
-  const isEventClosed = new Date(data.eventLastDate) < new Date() || participants?.length > data.eventRegistrationLimit;
+  const successfulParticipants = participants?.filter(participant => participant.paymentData?.data?.responseCode === "SUCCESS").length;
+  const isEventClosed = new Date(data.eventLastDate) < new Date() || successfulParticipants >= data.eventRegistrationLimit;
 
   return (
     <>
