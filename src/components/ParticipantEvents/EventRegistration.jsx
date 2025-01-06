@@ -17,6 +17,21 @@ const EventRegistration = () => {
   const [isAgreed, setIsAgreed] = useState(false);
   const [loading, setLoading] = useState(true);
   const [spinner, setSpinner] = useState(false);
+  const [year, setYear] = useState("");
+  const [educationBackground, setEducationBackground] = useState("");
+  const [heardFrom, setHeardFrom] = useState("");
+  const [specificTopics, setSpecificTopics] = useState("");
+  const [specialAllergies, setSpecialAllergies] = useState("");
+  const [communityAnswer, setCommunityAnswer] = useState("");
+
+  const extraQuestions = {
+    year,
+    educationBackground,
+    heardFrom,
+    specificTopics,
+    specialAllergies,
+    communityAnswer,
+  };
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -34,22 +49,24 @@ const EventRegistration = () => {
     fetchApi();
   }, []);
   const onSubmitHandler = async (e) => {
+    console.log(extraQuestions);
     e.preventDefault();
-    setSpinner(true);
+    // setSpinner(true);
     const Userdata = {
       name,
       college,
       email,
       rollNumber,
       phoneNumber,
+      communityAnswer,
     };
 
     if ((data && data.eventPrice) == "0") {
       try {
-        const response = await axios.post(
-          `https://eventaura-server-api.onrender.com/registration/${eventId}`,
-          Userdata
-        );
+        // const response = await axios.post(
+        //   `https://eventaura-server-api.onrender.com/registration/${eventId}`,
+        //   Userdata
+        // );
         console.log(response.data);
         if (response && response.data.message === true) {
           navigate(`/event/${response.data.id}/success`);
@@ -63,15 +80,15 @@ const EventRegistration = () => {
       return;
     }
 
-    try {
-      const response = await axios.post(
-        `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
-        Userdata
-      );
-      window.open(response.data, "_self");
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const response = await axios.post(
+    //     `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
+    //     Userdata
+    //   );
+    //   window.open(response.data, "_self");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -162,15 +179,7 @@ const EventRegistration = () => {
                   required
                 />
               </div>
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="College Name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                  value={college}
-                  onChange={(e) => setcollege(e.target.value)}
-                />
-              </div>
+
               <div className="relative">
                 <input
                   type="email"
@@ -187,15 +196,7 @@ const EventRegistration = () => {
                   </em>
                 </p>
               </div>
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Roll Number"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                  value={rollNumber}
-                  onChange={(e) => setRollNumber(e.target.value)}
-                />
-              </div>
+
               <div className="relative">
                 <input
                   type="tel"
@@ -208,6 +209,108 @@ const EventRegistration = () => {
                   required
                 />
               </div>
+              <div className="relative">
+                <select
+                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                  value={educationBackground}
+                  onChange={(e) => {
+                    setEducationBackground(e.target.value);
+                  }}
+                  required
+                >
+                  <option value="" disabled>
+                    Select your background
+                  </option>
+                  <option value="Student">Student</option>
+                  <option value="Professional">Professional</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              {/* start of dynamic */}
+
+              {educationBackground === "Student" && (
+                <>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Roll Number"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={rollNumber || ""}
+                      onChange={(e) => setRollNumber(e.target.value)}
+                    />
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Year"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={year || ""}
+                      onChange={(e) => setYear(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="College Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={college || ""}
+                      onChange={(e) => setcollege(e.target.value)}
+                    />
+                  </div>
+                </>
+              )}
+              {/* End of student */}
+
+              <div className="relative">
+                <select
+                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                  value={heardFrom}
+                  onChange={(e) => setHeardFrom(e.target.value)}
+                  required
+                >
+                  <option value="" disabled>
+                    How did you hear about Evolve 2024?
+                  </option>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Newsletter">Newsletter</option>
+                  <option value="Friend or College">Friend or College</option>
+                  <option value="Community">Community</option>
+                </select>
+              </div>
+
+              {heardFrom === "Community" && (
+                <>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Coumitiy Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={communityAnswer}
+                      onChange={(e) => setCommunityAnswer(e.target.value)}
+                    />
+                  </div>
+                </>
+              )}
+
+              <div className="relative">
+                <textarea
+                  placeholder="Specific topics you want addressed / suggestions"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                  value={specificTopics}
+                  onChange={(e) => setSpecificTopics(e.target.value)}
+                ></textarea>
+              </div>
+
+              <div className="relative">
+                <textarea
+                  placeholder="Special needs / allergies"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                  value={specialAllergies}
+                  onChange={(e) => setSpecialAllergies(e.target.value)}
+                ></textarea>
+              </div>
+
               <div className="relative">
                 <div className="mb-4">
                   <em className=" pb-7 text-gray-400">
