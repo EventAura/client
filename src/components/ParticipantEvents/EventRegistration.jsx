@@ -58,7 +58,7 @@ const EventRegistration = () => {
       email,
       rollNumber,
       phoneNumber,
-      communityAnswer,
+      extraQuestions,
     };
 
     if ((data && data.eventPrice) == "0") {
