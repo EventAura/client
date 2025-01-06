@@ -51,7 +51,7 @@ const EventRegistration = () => {
   const onSubmitHandler = async (e) => {
     console.log(extraQuestions);
     e.preventDefault();
-    // setSpinner(true);
+    setSpinner(true);
     const Userdata = {
       name,
       college,
