@@ -63,10 +63,10 @@ const EventRegistration = () => {
 
     if ((data && data.eventPrice) == "0") {
       try {
-        // const response = await axios.post(
-        //   `https://eventaura-server-api.onrender.com/registration/${eventId}`,
-        //   Userdata
-        // );
+        const response = await axios.post(
+          `https://eventaura-server-api.onrender.com/registration/${eventId}`,
+          Userdata
+        );
         console.log(response.data);
         if (response && response.data.message === true) {
           navigate(`/event/${response.data.id}/success`);
@@ -80,15 +80,15 @@ const EventRegistration = () => {
       return;
     }
 
-    // try {
-    //   const response = await axios.post(
-    //     `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
-    //     Userdata
-    //   );
-    //   window.open(response.data, "_self");
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      const response = await axios.post(
+        `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
+        Userdata
+      );
+      window.open(response.data, "_self");
+    } catch (error) {
+      console.log(error);
+    }
   };
   const handleModalOpen = () => {
     setIsModalOpen(true);
