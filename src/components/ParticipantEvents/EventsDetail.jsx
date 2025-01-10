@@ -4,6 +4,7 @@ import CopyButton from "../EventOnboarding/utils/CopyButton";
 import FormattedDate from "../EventOnboarding/utils/FormattedDate";
 import axios from "axios";
 import cryptoRandom from "crypto-random-string";
+import axiosInstance from "../../api/axiosInstance";
 
 const EventsDetail = () => {
   const { id } = useParams();
@@ -19,9 +20,10 @@ const EventsDetail = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get(
-          `https://eventaura-server-api.onrender.com/event/${id}`
-        );
+        // const response = await axios.get(
+        //   `https://eventaura-server-api.onrender.com/event/${id}`
+        // );
+        const response = await axiosInstance.get(`/event/${id}`);
         setData(response.data.data);
         console.log(response.data.data);
 
@@ -36,9 +38,10 @@ const EventsDetail = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const result = await axios.get(
-          `https://eventaura-server-api.onrender.com/participants/event/${id}`
-        );
+        // const result = await axios.get(
+        //   `https://eventaura-server-api.onrender.com/participants/event/${id}`
+        // );
+        const result = await axiosInstance.get(`/participants/event/${id}`);
         setParticipants(result.data);
         console.log(result.data);
       } catch (error) {

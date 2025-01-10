@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import bcrypt from "bcryptjs";
@@ -6,6 +6,7 @@ import axios from "axios";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useNavigate } from "react-router-dom";
+import axiosInstance from "../../api/axiosInstance";
 
 const EventOnboardingForm = () => {
   const navigate = useNavigate();
@@ -86,10 +87,11 @@ const EventOnboardingForm = () => {
     };
     console.log(data);
     try {
-      const response = await axios.post(
-        "https://eventaura-server-api.onrender.com/event",
-        data
-      );
+      // const response = await axios.post(
+      //   "https://eventaura-server-api.onrender.com/event",
+      //   data
+      // );
+      const response = await axiosInstance.post("/event", data);
       console.log("Form submitted with:", eventMailDescription);
       if (response.data.message) {
         setSpinner(false);

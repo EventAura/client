@@ -1,7 +1,8 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+
+import  { useState, useEffect } from "react";
 import { formatDate } from "./utils/formatDate";
 import { Link } from "react-router-dom";
+import axiosInstance from "../../api/axiosInstance";
 
 const Events = () => {
   const [eventData, setEventData] = useState([]);
@@ -10,9 +11,12 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get(
-          "https://eventaura-server-api.onrender.com/event"
-        );
+        
+        
+        const response = await axiosInstance.get("/event");
+        
+        
+
 
         setEventData(response.data.data);
         setLoading(false);

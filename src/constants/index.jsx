@@ -139,7 +139,7 @@ export const team = [
   {
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQESlx66wwEMJA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708603457057?e=1738800000&v=beta&t=LCLypqcKTBRF6wC5V69ECmEniq9SEA6Zc1cvnD8c7Kk",
-    name: "Sarhtak Aitha",
+    name: "Sarthak Aitha",
     title: "CTO & Technology Team Lead",
     linkedin: "https://www.linkedin.com/in/sarthak-aitha-943534252/",
     twitter: "javascript:void(0)",
