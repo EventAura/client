@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://35.207.208.130:8080',
+  baseURL: 'https://api.eventaura.tech/',
 });
 
 // Optional: Add interceptors (if needed)
