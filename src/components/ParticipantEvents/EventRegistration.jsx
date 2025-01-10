@@ -60,7 +60,7 @@ const EventRegistration = () => {
       email,
       rollNumber,
       phoneNumber,
-      communityAnswer,
+      extraQuestions,
     };
 
     if ((data && data.eventPrice) == "0") {
@@ -286,7 +286,7 @@ const EventRegistration = () => {
                   <div className="relative">
                     <input
                       type="text"
-                      placeholder="Coumitiy Name"
+                      placeholder="Community Name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                       value={communityAnswer}
                       onChange={(e) => setCommunityAnswer(e.target.value)}
