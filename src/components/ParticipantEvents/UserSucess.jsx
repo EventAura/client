@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import FormattedDate from "../EventOnboarding/utils/FormattedDate";
+import axiosInstance from "../../api/axiosInstance";
 
 const UserSuccess = () => {
   const { id } = useParams();
@@ -13,9 +14,10 @@ const UserSuccess = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get(
-          `https://eventaura-server-api.onrender.com/participant/${id}`
-        );
+        // const response = await axios.get(
+        //   `https://eventaura-server-api.onrender.com/participant/${id}`
+        // );
+        const response = await axiosInstance.get(`/participant/${id}`);
         console.log(response.data.paymentData);
         setdata(response.data);
         setloading(false);

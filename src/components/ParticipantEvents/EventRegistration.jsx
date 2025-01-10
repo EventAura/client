@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Modal from "./utils/Modal";
 import UserEULA from "../EULA/UserEULA ";
 import axios from "axios";
+import axiosInstance from "../../api/axiosInstance";
 
 const EventRegistration = () => {
   const navigate = useNavigate();
@@ -36,10 +37,10 @@ const EventRegistration = () => {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get(
-          `https://eventaura-server-api.onrender.com/event/${eventId}`
-          // `http://localhost:8080/event/${eventId}`
-        );
+        // const response = await axios.get(
+        //   `https://eventaura-server-api.onrender.com/event/${eventId}`
+        // );
+        const response = await axiosInstance.get(`/event/${eventId}`);
 
         setdata(response.data.data);
         setLoading(false);
@@ -59,14 +60,13 @@ const EventRegistration = () => {
       email,
       rollNumber,
       phoneNumber,
-      extraQuestions,
+      communityAnswer,
     };
 
     if ((data && data.eventPrice) == "0") {
       try {
         const response = await axios.post(
           `https://eventaura-server-api.onrender.com/registration/${eventId}`,
-          // `http://localhost:8080/registration/${eventId}`,
           Userdata
         );
         console.log(response.data);
@@ -85,7 +85,6 @@ const EventRegistration = () => {
     try {
       const response = await axios.post(
         `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
-        // `http://localhost:8080/api/phone-pay/registration/user/${eventId}`,
         Userdata
       );
       window.open(response.data, "_self");
@@ -105,55 +104,55 @@ const EventRegistration = () => {
       <>
         <div
           role="status"
-          className="w-full min-h-screen flex flex-col items-center justify-center px-2 py-16 sm:px-6 sm:py-24 animate-pulse"
+          class="w-full min-h-screen flex flex-col items-center justify-center px-2 py-16 sm:px-6 sm:py-24 animate-pulse"
         >
-          <div className="w-full max-w-md md:max-w-2xl lg:max-w-4xl space-y-8 bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-600 flex flex-col md:flex-row md:space-y-0 md:space-x-8">
-            <div className="md:w-1/2 space-y-6">
-              <div className="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
-              <div className="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
-              <div className="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
+          <div class="w-full max-w-md md:max-w-2xl lg:max-w-4xl space-y-8 bg-gray-900 p-8 rounded-3xl shadow-lg border border-gray-600 flex flex-col md:flex-row md:space-y-0 md:space-x-8">
+            <div class="md:w-1/2 space-y-6">
+              <div class="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
+              <div class="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
+              <div class="h-2.5 bg-gray-700 rounded-full w-48 mb-4"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[330px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[300px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
             </div>
 
-            <div className="md:w-1/2 space-y-4 bg-gray-800 p-2 sm:p-8 rounded-lg shadow-lg border border-gray-700">
-              <div className="h-2.5 bg-gray-700 rounded-full w-32 mb-4"></div>
-              <div className="space-y-2.5">
-                <div className="flex items-center justify-between">
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
+            <div class="md:w-1/2 space-y-4 bg-gray-800 p-2 sm:p-8 rounded-lg shadow-lg border border-gray-700">
+              <div class="h-2.5 bg-gray-700 rounded-full w-32 mb-4"></div>
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
+                <div class="flex items-center justify-between">
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
-                  <div className="h-2.5 bg-gray-700 rounded-full w-32"></div>
+                <div class="flex items-center justify-between">
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
+                  <div class="h-2.5 bg-gray-700 rounded-full w-32"></div>
                 </div>
               </div>
-              <div className="h-2.5 bg-gray-700 rounded-full w-32 mb-4"></div>
-              <div className="h-2.5 bg-gray-700 rounded-full w-32 mb-2"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[480px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[440px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[460px] mb-2.5"></div>
-              <div className="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
+              <div class="h-2.5 bg-gray-700 rounded-full w-32 mb-4"></div>
+              <div class="h-2.5 bg-gray-700 rounded-full w-32 mb-2"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[480px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[440px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[460px] mb-2.5"></div>
+              <div class="h-2 bg-gray-700 rounded-full max-w-[360px]"></div>
             </div>
           </div>
-          <span className="sr-only">Loading...</span>
+          <span class="sr-only">Loading...</span>
         </div>
       </>
     );

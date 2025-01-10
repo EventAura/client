@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CopyButton from "./utils/CopyButton";
 import FormattedDate from "./utils/FormattedDate";
+import axiosInstance from "../../api/axiosInstance";
 
 const Sucess = () => {
   const [data, setdata] = useState(null);
@@ -12,9 +13,10 @@ const Sucess = () => {
   useEffect(() => {
     const fetctApi = async () => {
       try {
-        const response = await axios.get(
-          `https://eventaura-server-api.onrender.com/event/${id}`
-        );
+        // const response = await axios.get(
+        //   `https://eventaura-server-api.onrender.com/event/${id}`
+        // );
+        const response = await axiosInstance.get(`/event/${id}`);
         console.log(response);
         setLoading(false);
         setdata(response.data.data);
