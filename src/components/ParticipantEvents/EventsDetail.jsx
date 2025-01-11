@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import CopyButton from "../EventOnboarding/utils/CopyButton";
 import FormattedDate from "../EventOnboarding/utils/FormattedDate";
 import axios from "axios";
@@ -7,6 +7,8 @@ import cryptoRandom from "crypto-random-string";
 import axiosInstance from "../../api/axiosInstance";
 
 const EventsDetail = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { id } = useParams();
   const [data, setData] = useState(null);
   const [participants, setParticipants] = useState(null);
@@ -19,13 +21,19 @@ const EventsDetail = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
+      if (location.pathname === "/event/67811eaa97c498fefc82659c") {
+        navigate("/event/6782a2e697c498fefc827439");
+        window.location.reload();
+        console.log("yes");
+      }
       try {
         // const response = await axios.get(
         //   `https://eventaura-server-api.onrender.com/event/${id}`
         // );
         const response = await axiosInstance.get(`/event/${id}`);
         setData(response.data.data);
-        console.log(response.data.data);
+        // console.log(response.data.data);
+        console.log(location.pathname);
 
         setLoading(false);
       } catch (error) {
