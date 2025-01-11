@@ -76,8 +76,12 @@ const EventsDetail = () => {
     );
   }
 
-  const successfulParticipants = participants?.filter(participant => participant.paymentData?.data?.responseCode === "SUCCESS").length;
-  const isEventClosed = new Date(data.eventLastDate) < new Date() || successfulParticipants >= data.eventRegistrationLimit;
+  const successfulParticipants = participants?.filter(
+    (participant) => participant.paymentData?.data?.responseCode === "SUCCESS"
+  ).length;
+  const isEventClosed =
+    new Date(data.eventLastDate) < new Date() ||
+    successfulParticipants >= data.eventRegistrationLimit;
 
   return (
     <>
@@ -208,6 +212,12 @@ const EventsDetail = () => {
                 <dt className="font-medium text-white">Why this event ?</dt>
                 <dd className="sm:col-span-2 text-gray-200">
                   {data.eventDescription}
+                </dd>
+              </div>
+              <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="font-medium text-white">Contact Details</dt>
+                <dd className="sm:col-span-2 text-gray-200">
+                  {data.eventManagerMail}
                 </dd>
               </div>
             </dl>
