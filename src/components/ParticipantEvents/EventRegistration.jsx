@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Modal from "./utils/Modal";
 import UserEULA from "../EULA/UserEULA ";
-import axios from "axios";
 import axiosInstance from "../../api/axiosInstance";
 
 const EventRegistration = () => {
@@ -65,8 +64,13 @@ const EventRegistration = () => {
 
     if ((data && data.eventPrice) == "0") {
       try {
-        const response = await axios.post(
-          `https://eventaura-server-api.onrender.com/registration/${eventId}`,
+        // const response = await axios.post(
+        //   `https://eventaura-server-api.onrender.com/registration/${eventId}`,
+
+        //   Userdata
+        // );
+        const response = await axiosInstance.post(
+          `/registration/${eventId}`,
           Userdata
         );
         console.log(response.data);
@@ -83,8 +87,12 @@ const EventRegistration = () => {
     }
 
     try {
-      const response = await axios.post(
-        `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
+      // const response = await axios.post(
+      //   `https://eventaura-server-api.onrender.com/api/phone-pay/registration/user/${eventId}`,
+      //   Userdata
+      // );
+      const response = await axiosInstance.post(
+        `/phone-pay/registration/user/${eventId}`,
         Userdata
       );
       window.open(response.data, "_self");
@@ -272,12 +280,12 @@ const EventRegistration = () => {
                   required
                 >
                   <option value="" disabled>
-                    How did you hear about Evolve 2024?
+                    How did you hear about ?
                   </option>
                   <option value="Social Media">Social Media</option>
                   <option value="Newsletter">Newsletter</option>
                   <option value="Friend or College">Friend or College</option>
-                  <option value="Community">Community</option>
+                  {/* <option value="Community">Community</option> */}
                 </select>
               </div>
 
