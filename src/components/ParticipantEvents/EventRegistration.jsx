@@ -92,7 +92,7 @@ const EventRegistration = () => {
       //   Userdata
       // );
       const response = await axiosInstance.post(
-        `/phone-pay/registration/user/${eventId}`,
+        `api/phone-pay/registration/user/${eventId}`,
         Userdata
       );
       window.open(response.data, "_self");
