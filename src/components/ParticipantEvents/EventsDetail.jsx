@@ -218,9 +218,18 @@ const EventsDetail = () => {
 
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
                 <dt className="font-medium text-white">Why this event ?</dt>
-                <dd className="sm:col-span-2 text-gray-200">
+                {/* <dd className="sm:col-span-2 text-gray-200">
                   {data.eventDescription}
-                </dd>
+                </dd> */}
+                <dd className="sm:col-span-2 text-gray-200">
+  {data.eventDescription.split("\n").map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ))}
+</dd>
+
               </div>
               <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
                 <dt className="font-medium text-white">Contact Details</dt>
