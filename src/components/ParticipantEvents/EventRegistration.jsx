@@ -23,6 +23,7 @@ const EventRegistration = () => {
   const [specificTopics, setSpecificTopics] = useState("");
   const [specialAllergies, setSpecialAllergies] = useState("");
   const [communityAnswer, setCommunityAnswer] = useState("");
+ 
 
   const extraQuestions = {
     year,
@@ -182,7 +183,7 @@ const EventRegistration = () => {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Your Name *"
+                  placeholder="Your Name * (As per Aadhar Card) "
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -282,9 +283,11 @@ const EventRegistration = () => {
                   <option value="" disabled>
                     How did you hear about ?
                   </option>
-                  <option value="Social Media">Social Media</option>
-                  <option value="Newsletter">Newsletter</option>
+                  <option value="Social Media">Social Media/Group</option>
+                  {/* <option value="Newsletter">Newsletter</option> */}
                   <option value="Friend or College">Friend or College</option>
+                  <option value="My Friend">My Friend</option>
+                  <option value="Other">Other</option>
                   {/* <option value="Community">Community</option> */}
                 </select>
               </div>
@@ -303,18 +306,63 @@ const EventRegistration = () => {
                 </>
               )}
 
-              <div className="relative">
+              {heardFrom === "Social Media" && (
+                <>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Social Media Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={communityAnswer}
+                      onChange={(e) => setCommunityAnswer(e.target.value)}
+                    />
+                  </div>
+                </>
+
+              )}
+                
+              {heardFrom === "Friend or College" && (
+                <>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Friend or College Name"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                    value={communityAnswer}
+                    onChange={(e) => setCommunityAnswer(e.target.value)}
+                  />
+                </div>
+                </>
+              )}
+
+              {heardFrom === "Other" && (
+                <>
+                <div className="relative">
+                  <input
+
+                    type="text"
+                    placeholder="Other Source Name"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                    value={communityAnswer}
+                    onChange={(e) => setCommunityAnswer(e.target.value)}
+                  />
+                </div>
+                </>
+              )}
+
+
+              {/* <div className="relative">
                 <textarea
                   placeholder="Specific topics you want addressed / suggestions"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={specificTopics}
                   onChange={(e) => setSpecificTopics(e.target.value)}
                 ></textarea>
-              </div>
+              </div> */}
 
               <div className="relative">
                 <textarea
-                  placeholder="Special needs / allergies"
+                  placeholder="What do you expect from the event?"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={specialAllergies}
                   onChange={(e) => setSpecialAllergies(e.target.value)}
