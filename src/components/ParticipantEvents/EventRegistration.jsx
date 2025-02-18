@@ -23,9 +23,7 @@ const EventRegistration = () => {
   const [specificTopics, setSpecificTopics] = useState("");
   const [specialAllergies, setSpecialAllergies] = useState("");
   const [communityAnswer, setCommunityAnswer] = useState("");
-  const [SocialMedia, setSocialMedia] = useState("");
-  const [FriendOrCollege, setFriendOrCollege] = useState("");
-  const [Other, setOther] = useState("");
+ 
 
   const extraQuestions = {
     year,
@@ -315,8 +313,8 @@ const EventRegistration = () => {
                       type="text"
                       placeholder="Social Media Name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                      value={SocialMedia}
-                      onChange={(e) => setSocialMedia(e.target.value)}
+                      value={communityAnswer}
+                      onChange={(e) => setCommunityAnswer(e.target.value)}
                     />
                   </div>
                 </>
@@ -330,8 +328,8 @@ const EventRegistration = () => {
                     type="text"
                     placeholder="Friend or College Name"
                     className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                    value={FriendOrCollege}
-                    onChange={(e) => setFriendOrCollege(e.target.value)}
+                    value={communityAnswer}
+                    onChange={(e) => setCommunityAnswer(e.target.value)}
                   />
                 </div>
                 </>
@@ -345,26 +343,26 @@ const EventRegistration = () => {
                     type="text"
                     placeholder="Other Source Name"
                     className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                    value={Other}
-                    onChange={(e) => setOther(e.target.value)}
+                    value={communityAnswer}
+                    onChange={(e) => setCommunityAnswer(e.target.value)}
                   />
                 </div>
                 </>
               )}
 
 
-              <div className="relative">
+              {/* <div className="relative">
                 <textarea
                   placeholder="Specific topics you want addressed / suggestions"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={specificTopics}
                   onChange={(e) => setSpecificTopics(e.target.value)}
                 ></textarea>
-              </div>
+              </div> */}
 
               <div className="relative">
                 <textarea
-                  placeholder="Special needs / allergies"
+                  placeholder="What do you expect from the event?"
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
                   value={specialAllergies}
                   onChange={(e) => setSpecialAllergies(e.target.value)}
