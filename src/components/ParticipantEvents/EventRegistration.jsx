@@ -280,7 +280,7 @@ const EventRegistration = () => {
                   required
                 >
                   <option value="" disabled>
-                    How did you hear about ?
+                    How did you hear about Us?
                   </option>
                   <option value="Creator">Creator</option>
                   <option value="Social Media">Social Media/Group</option>
