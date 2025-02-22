@@ -320,7 +320,7 @@
 //                 </>
 
 //               )}
-                
+
 //               {heardFrom === "Friend or College" && (
 //                 <>
 //                 <div className="relative">
@@ -353,14 +353,13 @@
 //               <div>
 //                 <input
 
-//                   type="text" 
+//                   type="text"
 //                   placeholder="Coupon Code"
 //                   className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
 //                   value={couponCode}
 //                   onChange={(e) => setCouponCode(e.target.value)}
 //                 />
 //               </div>
-
 
 //               {/* <div className="relative">
 //                 <textarea
@@ -563,13 +562,6 @@
 // };
 // export default EventRegistration;
 
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Modal from "./utils/Modal";
@@ -598,7 +590,7 @@ const EventRegistration = () => {
   const [couponCode, setCouponCode] = useState("");
   const [isCouponValid, setIsCouponValid] = useState(false);
   const [couponValidationMessage, setCouponValidationMessage] = useState(""); // New state for validation message
-  
+
   console.log(isCouponValid);
 
   const extraQuestions = {
@@ -625,13 +617,15 @@ const EventRegistration = () => {
   }, []);
 
   const checkCouponCode = () => {
-    if (couponCode === "microsoft2025") {
+    if (couponCode === "SDCSNIST") {
       setIsCouponValid(true);
-      setCouponValidationMessage("Correct"); // Set validation message
+      setCouponValidationMessage(
+        "Your discount of ₹99.80 will be refunded back to you within 48 hours."
+      ); // Set validation message
       console.log("Coupon code is correct");
     } else {
       setIsCouponValid(false);
-      setCouponValidationMessage("Incorrect"); // Set validation message
+      setCouponValidationMessage("Not a Valid Coupon Code"); // Set validation message
       console.log("Coupon code is incorrect or invalid");
     }
   };
@@ -897,35 +891,33 @@ const EventRegistration = () => {
                     />
                   </div>
                 </>
-
               )}
-                
+
               {heardFrom === "Friend or College" && (
                 <>
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Friend or College Name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                    value={communityAnswer}
-                    onChange={(e) => setCommunityAnswer(e.target.value)}
-                  />
-                </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Friend or College Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={communityAnswer}
+                      onChange={(e) => setCommunityAnswer(e.target.value)}
+                    />
+                  </div>
                 </>
               )}
 
               {heardFrom === "Other" && (
                 <>
-                <div className="relative">
-                  <input
-
-                    type="text"
-                    placeholder="Other Source Name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                    value={communityAnswer}
-                    onChange={(e) => setCommunityAnswer(e.target.value)}
-                  />
-                </div>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Other Source Name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-700 text-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                      value={communityAnswer}
+                      onChange={(e) => setCommunityAnswer(e.target.value)}
+                    />
+                  </div>
                 </>
               )}
               {/* Coupon Code Section */}
@@ -949,7 +941,8 @@ const EventRegistration = () => {
               {couponValidationMessage && (
                 <p
                   className={`text-sm ${
-                    couponValidationMessage === "Correct"
+                    couponValidationMessage ===
+                    "Your discount of ₹99.80 will be refunded back to you within 48 hours."
                       ? "text-green-500"
                       : "text-red-500"
                   }`}
