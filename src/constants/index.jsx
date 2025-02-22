@@ -93,7 +93,7 @@ export const pricingOptions = [
   },
   {
     title: "Paid",
-    price: "2% + 25 INR",
+    price: "2% + 5 INR",
     features: [
       "Designed for Paid Events",
       "Unlimited Participants Onboarding",
