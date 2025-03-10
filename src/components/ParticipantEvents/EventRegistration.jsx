@@ -617,7 +617,7 @@ const EventRegistration = () => {
   }, []);
 
   const checkCouponCode = () => {
-    if (couponCode === "SDCSNIST") {
+    if (couponCode === "SDCSNIST" || couponCode === "@EventAura") {
       setIsCouponValid(true);
       setCouponValidationMessage(
         "Your discount of ₹99.80 will be refunded back to you within 48 hours."
